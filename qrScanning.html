@@ -6,7 +6,6 @@
 			fetch("https://api.ipify.org?format=json")
 				.then(response=>response.json())
 				.then(data=>ip=data.ip);
-    			});
 			fetch("https://prod-75.westeurope.logic.azure.com/workflows/cb0a59eea28741899c2e698608b2c220/triggers/manual/paths/invoke/" + params.get('id') + "/" + ip + "?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=nZ958yUUCnlQ4Yav1OS6A4H5SSF6qFTNSXarb--UBtE")
 				.then(response=>response.json())
 				.then(data=>document.getElementById("container").innerHTML=data.response);
