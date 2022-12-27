@@ -2,7 +2,7 @@
 	<head>
 		<script>
 			const params = new URLSearchParams(window.location.search);
-			const ip = null;
+			let ip = null;
 			fetch("https://api.ipify.org?format=json")
 				.then(response=>response.json())
 				.then(data=>ip=data.ip);
