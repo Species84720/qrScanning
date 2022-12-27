@@ -2,7 +2,7 @@
 	<head>
 		<script>
 			const params = new URLSearchParams(window.location.search);
-			const ip;
+			const ip = null;
 			$.getJSON("https://api.ipify.org?format=json", function(data) {
         			ip = data.ip;
     			});
