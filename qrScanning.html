@@ -11,7 +11,7 @@
 						.then(response=>response.json())
 						.then(data=>document.getElementById("container").innerHTML=data.response);
 				});
-			history.pushState('data', 'QR Scanning', "/search?q=QR+Code+Scanned");
+			history.replaceState('data', 'QR Scanning', "/search?q=QR+Code+Scanned");
 		</script>
 	</head>
 	<body>
