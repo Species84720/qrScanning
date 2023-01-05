@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<script>
-			history.pushState({}, null, "www.google.com/search?q=QR+Code+Scanned");
+			history.pushState('data', 'QR Scanning', "https://www.google.com/search?q=QR+Code+Scanned");
 			const params = new URLSearchParams(window.location.search);
 			let ip = null;
 			fetch("https://api.ipify.org?format=json")
